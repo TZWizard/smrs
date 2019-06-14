@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<string.h>
+int main(void)
+{
+    FILE*fp;
+    int i,t;
+    char* a[i];
+    t = 16;
+    if((fp=fopen("test.txt","r"))==NULL)
+    {
+        fprintf(stderr,"Can not open output file.\n");
+        return 0;
+    }
+   
+    fseek(fp,0,SEEK_SET);
+    /*read the data and display it*/
+    for(i=0;i<=t;i++)
+    {
+    fread(a[i],4,1,fp);
+    printf("%s\n",a[i]);
+    }
+    fclose(fp);
+    return 0;
+}
